@@ -1,49 +1,3 @@
-// import React, { useEffect, useState } from 'react';
-// import {ApolloClient, InMemoryCache, gql, useQuery} from '@apollo/client';
-// import './App.css';
-
-
-// const App = () => {
-//   const [time, setTime] = useState('');
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       var date = new Date;
-//       var hours = date.getHours();
-//       var minutes = date.getMinutes().toString().replace(/^(\d)$/, '0$1');
-//       var seconds = date.getSeconds().toString().replace(/^(\d)$/, '0$1');
-//       var ampm = hours >= 12 ? 'pm' : 'am';
-//       hours = hours % 12;
-//       hours = hours ? hours : 12; // the hour '0' should be '12'
-//       var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
-//       setTime(strTime);
-//     }, 1000);
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className='main'>
-
-//       <div className='sub-menu'>
-//         {/* <button>Enter Country Code</button> */}
-//         <input type="text" name="countryCode" placeholder='Enter Country Code'/>
-//         <p className='text'>Name:India</p>
-//         <p className='text'>Code:In</p>
-//         <p className='text'>Currency:INR</p>
-//         <p className='text'>Flag:Flag EMOJI</p>  
-//         <p className='text'>Language:English,Marathi</p>
-//       </div>
-//       <div className='sub-menu'>
-//       {/* <button>Enter Continent Code</button> */}
-//       <input type="text" name="continentCode" placeholder='Enter Continent Code'/>
-//         <p className='text'>Countries</p> 
-//         <p className='text'>Country Name</p>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default App;
-
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { ApolloClient, InMemoryCache, gql, useQuery } from '@apollo/client';
@@ -54,16 +8,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
   uri: 'https://countries.trevorblades.com'
 });
-
-// write a GraphQL query that asks for names and codes for all countries
-const LIST_COUNTRIES = gql`
-  {
-    countries {
-      name
-      code
-    }
-  }
-`;
 
 // create a component that renders a select input for coutries
 function App() {
@@ -96,6 +40,7 @@ function App() {
                                                                                     }
                                                                                   }
                                                                                 `, { client });
+                                                                                
   useEffect(() => { 
     refetch(); 
     refetchR(); 
