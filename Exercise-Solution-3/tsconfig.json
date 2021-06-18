@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        //...
+        // Can use to "react" if you aren't using `babel-loader` and `@babel/preset-react` to handle jsx
+        "jsx": "react" /* Specify JSX code generation: "preserve", "react-native", or "react". */,
+        // Include these so the `react` imports work nicely:
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
+    }
+}

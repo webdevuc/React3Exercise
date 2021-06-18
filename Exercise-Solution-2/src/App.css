@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('opentype');
+  }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto-Bold;
+    flex-direction: column;
+}
+.actButton{
+    background: #5E19F5;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    font-family: Roboto-Regular;
+    font-size: 32px;
+    color: #FFFFFF;
+    margin: 30px;
+    padding: 5px 30px;
+}
+.count{
+    font-size: 84px;
+    color:#37474F; 
+}
+.btnContainer{
+    flex-direction: row;
+}

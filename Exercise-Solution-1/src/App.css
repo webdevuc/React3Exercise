@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('opentype');
+  }
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.time{
+    font-size: 84px;
+    color: #37474F;
+    font-family: Roboto-Bold;
+}

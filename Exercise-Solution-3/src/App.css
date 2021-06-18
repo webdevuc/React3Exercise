@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: local('Roboto-Bold'), url(./fonts/Roboto-Bold.ttf) format('opentype');
+  }
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: Roboto-Bold;
+}
+.text{
+    font-size: 15px;
+    color: #37474F;
+    font-weight: 500;
+}
+.sub-menu{
+    height: 400px;
+}
+.continentList{
+    height: 400px;
+    overflow-y: scroll;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "exercise3",
+  "description": "A react app which shows list of countries using GraphQL.",
+  "version": "0.0.1",
+  "license": "UNLICENSED"
+}
